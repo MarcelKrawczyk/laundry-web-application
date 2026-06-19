@@ -4,7 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>LaundryApiWebApplication3</RootNamespace>
+        <RootNamespace>LaundryWebApplication</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
