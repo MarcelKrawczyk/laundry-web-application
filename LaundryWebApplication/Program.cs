@@ -1,4 +1,5 @@
 using LaundryWebApplication.Data;
+using LaundryWebApplication.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,8 +10,12 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+// -----
+builder.Services.AddScoped<ILaundryService, LaundryService>();
+
 builder.Services.AddDbContext<LaundryContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// -----
 
 var app = builder.Build();
 
